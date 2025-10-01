@@ -17,8 +17,7 @@ def menu_prompt_options() -> None:
         '[A]dd | '
         '[C]omplete | '
         '[R]emove | '
-        '[S]ave | '
-        '[V]iew | '
+        '[W]rite | '
         '[Q]uit'
     )
     panel = Panel(
@@ -158,7 +157,7 @@ class PyCrastinate:
                         self._complete_task(task_id_input)
                     case 'R':
                         self._remove_task(task_id_input)
-        elif user_cmd == 'S':
+        elif user_cmd == 'W':
             self._save_tasks()
         elif user_cmd == 'Q':
             self._exit_loop()
