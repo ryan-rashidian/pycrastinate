@@ -58,9 +58,12 @@ def prompt_task_date() -> str | None:
 
 def get_unique_id(tasks: list[Task]) -> int:
     """Calculate unique id value."""
-    task_ids = [task.task_id for task in tasks]
     try:
-        return max(task_ids) + 1
+        i = 1
+        while True:
+            if i not in [task.task_id for task in tasks]:
+                return i
+            i += 1
     except ValueError:
         return 1
 
