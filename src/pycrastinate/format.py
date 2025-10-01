@@ -21,7 +21,7 @@ custom_themes = Theme({
 console = Console(theme=custom_themes)
 
 def _color_task(task: Task, theme: str) -> tuple[Text, Text, Text, Text]:
-    """Give color theme to task."""
+    """Give color theme to a task."""
     id_fmt = Text(task.id, style=theme)
     date_fmt = Text(task.date, style=theme)
     description_fmt = Text(task.description, style='info')
@@ -29,7 +29,7 @@ def _color_task(task: Task, theme: str) -> tuple[Text, Text, Text, Text]:
     return status_fmt, id_fmt, description_fmt, date_fmt
 
 def style_task(task: Task) -> tuple[Text, Text, Text, Text]:
-    """Style task text based on due date."""
+    """Style task text based on proximity to due date."""
     now = datetime.now().date()
 
     if now < task.task_date.date():

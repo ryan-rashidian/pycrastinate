@@ -28,7 +28,7 @@ class Task:
         self.status = '[\u2713]'
 
     def to_dict(self) -> dict:
-        """Convert Task to dictionary as intermediate for saving to JSON."""
+        """Convert Task to dictionary intermediate for saving to JSON."""
         return {
             'description': self.description,
             'date': self.date,

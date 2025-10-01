@@ -12,7 +12,7 @@ from pycrastinate.tasks import Task, load_json, save_json
 
 
 def menu_prompt_options() -> None:
-    """Main menu."""
+    """Options menu."""
     main_prompt = (
         '[A]dd | '
         '[C]omplete | '
@@ -57,7 +57,7 @@ def prompt_task_date() -> str | None:
             console.print(Text(f'Incorrect Format: {date_input}'))
 
 def get_unique_id(tasks: list[Task]) -> int:
-    """Calculate the next unique id value."""
+    """Calculate unique id value."""
     task_ids = [task.task_id for task in tasks]
     try:
         return max(task_ids) + 1

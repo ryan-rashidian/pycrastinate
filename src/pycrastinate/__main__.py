@@ -4,7 +4,7 @@ from pycrastinate.core import PyCrastinate
 
 
 def main() -> None:
-    """Run PyCal CLI."""
+    """Run PyCrastinate CLI."""
     PyCrastinate().run_loop()
 
 if __name__ == '__main__':
