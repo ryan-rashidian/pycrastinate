@@ -1,6 +1,7 @@
 """Contains core logic for orchestrating application workflow."""
 
 from datetime import datetime
+from os import wait
 
 from rich import box
 from rich.panel import Panel
@@ -22,9 +23,10 @@ def menu_prompt_options() -> None:
     )
     panel = Panel(
         Text(main_prompt, style='alternate'),
-        title='Options',
-        padding=1,
-        style='main'
+        title = 'Options',
+        padding = 1,
+        box = box.HORIZONTALS,
+        style = 'main'
     )
     console.print(panel, justify='center')
 
@@ -70,7 +72,7 @@ def render_tasks(tasks: list[Task]) -> None:
     """Generate Table of current tasks."""
     sorted_tasks = sorted(tasks, key=lambda t: t.task_date)
 
-    table = Table(box=box.ROUNDED, expand=True, style='main')
+    table = Table(box=box.SIMPLE, expand=True, style='main')
     table.add_column(
         Text('[\u2713]', style='alternate'),
         justify='center',
