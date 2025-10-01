@@ -1,0 +1,8 @@
+PyCrastinate - command-line task reminder application.
+Copyright 2025 Ryan A. Rashidian
+
+This product includes third-party software licensed under the following licenses:
+
+- rich: Licensed under the MIT License.
+  https://github.com/Textualize/rich/blob/master/LICENSE
+

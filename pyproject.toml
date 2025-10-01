@@ -1,0 +1,20 @@
+[project]
+name = "PyCrastinate"
+version = "0.1.0"
+description = "A Python CLI task reminder app."
+readme = "README.md"
+license = "Apache-2.0"
+authors = [{ name = "Ryan A. Rashidian" }]
+dependencies = ["rich"]
+
+[project.scripts]
+pycrastinate = "pycrastinate.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py313"
+lint.select = ["E", "F", "W", "I", "B"]
+

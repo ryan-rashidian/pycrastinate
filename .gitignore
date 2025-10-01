@@ -1,0 +1,13 @@
+*.build/
+*.db
+*.dist/
+*.egg-info/
+*.env
+*.env.tmp
+*.py[cod]
+*.sqlite3
+__pycache__/
+build/
+dist/
+tasks.json
+
